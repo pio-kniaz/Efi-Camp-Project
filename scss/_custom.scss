@@ -18,7 +18,7 @@
   .right-wrapper{
 
     .box-wrapper{
-      padding: 0 4.5% 27% 4.5%;
+      padding: 0 4.5% 14% 4.5%;
       border-radius: 5px;
       max-width: 546px;
       background-color: $box-color;
@@ -34,7 +34,7 @@
         p{
           margin-top: -15px;
           margin-bottom: 50px;
-          padding-bottom: 15%;
+          padding-bottom: 5%;
           font-size: 15px;
         }
 
@@ -52,20 +52,21 @@
         border: 1px solid rgba(255, 255, 255,0.25);
 
         margin: 0 auto;
-        height: 253px;
+        max-height: 253px;
         .login-wrapper{
-          padding: 5% 0 1% 0;
+          padding-top: 10px;
 
           input[type="text"]{
-            font-weight: bold;
             width: 20%;
             display: inline-block;
-            background: inherit;
+            background: none;
             text-align: center;
             outline: none;
             border: none;
             color: inherit;
             outline-color: none;
+            box-shadow: none;
+            font-weight: bold;
           }
           input:focus{
             outline: none;
