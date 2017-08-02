@@ -54,9 +54,10 @@
         margin: 0 auto;
         height: 253px;
         .login-wrapper{
-
+          padding: 5% 0 1% 0;
 
           input[type="text"]{
+            font-weight: bold;
             width: 20%;
             display: inline-block;
             background: inherit;
