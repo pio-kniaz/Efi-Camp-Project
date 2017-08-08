@@ -10,6 +10,14 @@
   </head>
   <body>
     <div class="login-page-wrapper">
+      <nav class="login-page-nav">
+        <ul class="login-page-nav-main">
+          <li><a href="#">security</a></li>
+          <li><a href="#">Login in</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+        <button type="button" name="button" class="hamburger">Klik</button>
+      </nav>
       <div class="row login-sec-wrapper">
         <div class="  column large-3 medium-2  small-3  left-wrapper">
           <div class="logo-left">
@@ -36,14 +44,14 @@
               </div>
               <div class="password-wrapper">
                 <label for="password"></label>
-                <input type="password" name="" value="" id="password">
+                <input type="password" name="" value="" id="password" class="inputPassword">
                 <span><img src="./img/keyb.png" alt=""></span>
 
               </div>
 
               <div class="button-wrapper">
                 <p>Select Other</p>
-                <button type="button" name="button">Go</button>
+                <button type="submit" name="button" class="submitButton">Go</button>
 
               </div>
 
@@ -65,5 +73,12 @@
       </div>
 
     </div>
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/what-input/dist/what-input.js"></script>
+    <script src="bower_components/foundation-sites/dist/js/foundation.js"></script>
+    <script src="js/login.js"></script>
+    <script src="js/hamburger.js"></script>
+    <script src="js/app.js"></script>
+
   </body>
 </html>

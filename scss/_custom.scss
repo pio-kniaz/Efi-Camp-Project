@@ -12,10 +12,18 @@
       padding-right: 10px;
       text-align: right;
       img{width: auto;}
+      @media(max-width: 640px){
+        display: none;
+      }
 
     }
   }
   .right-wrapper{
+    // @media(max-width: 640px){
+    //   padding-left: 0px;
+    //   padding-right: 0px;
+    // }
+
 
     .box-wrapper{
       padding: 0 4.5% 14% 4.5%;
@@ -23,6 +31,9 @@
       max-width: 546px;
       background-color: $box-color;
       text-align: center;
+      @media(max-width: 640px){
+        max-width: 640px;
+      }
 
       .top-wrapper{
         padding-top: 25px;
@@ -63,10 +74,11 @@
             text-align: center;
             outline: none;
             border: none;
-            color: inherit;
+            // color: inherit;
             outline-color: none;
             box-shadow: none;
             font-weight: bold;
+            color: black;
           }
           input:focus{
             outline: none;
@@ -128,4 +140,8 @@
     }
     }
   }
+}
+
+.warrning{
+  border: 2px solid red;
 }
