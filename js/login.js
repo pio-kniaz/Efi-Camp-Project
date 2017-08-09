@@ -1,5 +1,6 @@
 $(document).foundation();
-//variables
+
+(function(){
 
 const button=document.querySelector(".submitButton");
 const inputPassword=document.querySelector('.inputPassword');
@@ -14,6 +15,5 @@ button.addEventListener("click",function(event){
   else{
     inputPassword.classList.add("warrning");
     }
-
-
 })
+})();
