@@ -52,6 +52,14 @@
 
       }
       .input-wrapper{
+        .triangle{
+          margin: auto;
+          width: 0;
+  height: 0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-bottom: 40px solid red;
+        }
         .user-photo{
           margin: auto;
           background: white;
@@ -65,31 +73,62 @@
         margin: 0 auto;
         max-height: 253px;
         .login-wrapper{
+    //       .triangle{
+    //         margin: auto;
+    //         width: 0;
+  	// height: 0;
+  	// border-left: 20px solid transparent;
+  	// border-right: 20px solid transparent;
+  	// border-bottom: 40px solid red;
+    //       }
+          .x-icon{
+            display: inline-block;
+            width: 7%;
+            margin-left: 2%;
+            .fi-x{
+
+
+
+
+            }
+          }
+
+          .fake-login{
+            padding-left: 7%;
+            margin-left: 2%;
+            width: 17%;
+
+          }
           padding-top: 10px;
+          .hiden{
+            display: none;
+          }
+          .unHide{
+            display: inline-block;
+          }
 
           input[type="text"]{
-            width: 20%;
-            display: inline-block;
-            background: none;
+            margin:4% auto;
+            width: 83%;
+            border-radius: 5px;
             text-align: center;
-            outline: none;
-            border: none;
-            // color: inherit;
-            outline-color: none;
-            box-shadow: none;
-            font-weight: bold;
-            color: black;
           }
           input:focus{
             outline: none;
           }
+
         }
+
         .password-wrapper{
+
+          margin-top: 10px;
+          margin-bottom: 10px;
           input[type="password"]{
             margin: auto;
             width: 83%;
             display: inline-block;
             border-radius: 5px;
+            text-align: center;
           }
           span{
 
