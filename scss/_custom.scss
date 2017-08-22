@@ -52,13 +52,58 @@
 
       }
       .input-wrapper{
-        .triangle{
-          margin: auto;
+        // margin-bottom: -5%;
+        .triangle1{
+          // position: absolute;
+          border: 1px solid #ed4337;
+          border-radius: 4px;
+          background: #fcc;
+          z-index: 100;
+          opacity: .9;
+          width:25%;
+          height: 50px;
+          min-width: 50px;
+          transform: translateY(0%) translateX(10%);
+          position: relative;
+          display: none;
+          color:  black;
+          }
+          .fakeloginhiden,.triangle1.unHide{
+            display: block;
+          }
+        .triangle2{
+          // position: absolute;
+          border: 1px solid #ed4337;
+          border-radius: 4px;
+          background: #fcc;
+          z-index: 100;
+          opacity: .9;
+          width:25%;
+          height: 50px;
+          min-width: 50px;
+          transform: translateY(40%) translateX(10%);
+          position: relative;
+          display: none;
+          color:  black;
+
+        }
+        .triangle2.unHide{
+          display: block;
+        }
+        .triangle::before{
+
+          content: "";
+          display: block;
+          margin: 0 auto;
           width: 0;
-  height: 0;
-  border-left: 20px solid transparent;
-  border-right: 20px solid transparent;
-  border-bottom: 40px solid red;
+          height: 0;
+          border-left: 10px solid transparent;
+          border-right: 10px solid transparent;
+          border-bottom: 20px solid red;
+          position: absolute;
+          top: -20px;
+
+
         }
         .user-photo{
           margin: auto;
@@ -73,14 +118,8 @@
         margin: 0 auto;
         max-height: 253px;
         .login-wrapper{
-    //       .triangle{
-    //         margin: auto;
-    //         width: 0;
-  	// height: 0;
-  	// border-left: 20px solid transparent;
-  	// border-right: 20px solid transparent;
-  	// border-bottom: 40px solid red;
-    //       }
+          // margin-bottom: -4%;
+
           .x-icon{
             display: inline-block;
             width: 7%;

@@ -1,22 +1,9 @@
 $(document).foundation();
 
-// (function(){
-//
-// const button=document.querySelector(".submitButton");
-// const inputPassword=document.querySelector('.inputPassword');
-//
-// button.addEventListener("click",function(event){
-//   event.preventDefault();
-//
-//   if (inputPassword.value!="") {
-//       window.location.replace("index.html");
-//       inputPassword.classList.remove("warrning");
-//   }
-//   else{
-//     inputPassword.classList.add("warrning");
-//     }
-// })
-// })();
+const fakeLogin=document.querySelector(".fake-login");
+const button=document.querySelector(".submitButton");
+const inputPassword=document.querySelector('.inputPassword');
+
 $(".fi-x").on("click",function(){
   var loginVal = $("#password").val();
   var userNameVal= $("#username").val();
@@ -44,23 +31,37 @@ function call() {
        url: "https://efigence-camp.herokuapp.com/api/login",
        error: function(response) {
            console.log(response.responseText);
+           (function(){
+             inputPassword.classList.add("warrning");
+
+             $(".inputPassword").addClass("warrning");
+             $('.triangle1').addClass("unHide");
+             $('.triangle2').addClass("unHide");
+
+
+
+           button.addEventListener("click",function(event){
+             event.preventDefault();
+
+
+           })
+           })();
        },
        success: function(response) {
+            inputPassword.classList.remove("warrning");
+            $('.triangle1').removeClass("unHide");
+            $('.triangle2').removeClass("unHide");
+
            console.log(response);
        }
    });
 }
 
-// var visibleLogin =document.querySelector(".fi-x");
-// visible.addEventListener("click",function(){
-//   console.log("wokr");
-//
-//
-// })
 
 var xButton=$('.fi-x');
 xButton.on("click",function(){
   $("#username").removeClass("hiden");
+  
   $("#username").addClass("unHide");
   $(".fake-login").addClass("hiden");
 })
