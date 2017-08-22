@@ -33,10 +33,15 @@
           </div>
           <div class="large-6 medium-6 center-nav-wrap">
             <ul class="nav-main-page">
-              <li class="home"><a href="#"><i class="fi-home icon-center"></i>Home</span></a></li><span class="home-icon">
+              <li class="home"><a href="#"><span class="icon-home"></span>HOME</a></li>
+              <li><a href="#"><span class="icon-chart-area"></span>ANALYSE</a></li>
+              <li><a href="#"><span class="icon-calendar-empty"></span>PLAN</a></li>
+              <li><a href="#"><span class="icon-money"></span>EARN</a></li>
+              <li><a href="#"><span></span></a></li>
+              <!-- <li class="home"><a href="#"><i class="fi-home icon-center"></i>Home</span></a></li><span class="home-icon">
               <li><a href="#"><i class="fi-home icon-center"></i>Home</span></a></li><span class="home-icon">
               <li><a href="#"><i class="fi-home icon-center"></i>Home</span></a></li><span class="home-icon">
-              <li><a href="#"><i class="fi-home icon-center"></i>Home</span></a></li><span class="home-icon">
+              <li><a href="#"><i class="fi-home icon-center"></i>Home</span></a></li><span class="home-icon"> -->
             </ul>
           </div>
           <div class="column right-nav-wrap move-left">
@@ -81,7 +86,7 @@
       <div class="columns switch-wrap">
         <div class="wrap-switch-btn move-left">
         <span>Accounts analysis</span>
-        
+
                 <div class="switch">
       <input class="switch-input" id="on-off" type="checkbox" name="AccountsAnalysis"checked>
       <label class="switch-paddle" for="on-off">
@@ -94,6 +99,11 @@
       </div>
 
     </div>
+    <div id="main-chart" class="column small-12">
+            <div class="finance-chart-area">
+                <canvas id="finance-chart" class="finance-chart" width="400" height="100"></canvas>
+            </div>
+        </div>
     <!--  productAndHistory-->
     <div class="row">
       <div class="products small-12 medium-6 large-6 column">
@@ -298,6 +308,7 @@
     <script src="bower_components/foundation-sites/dist/js/foundation.js"></script>
     <script src="js/login.js"></script>
     <script src="js/app.js"></script>
+
 
   </body>
 </html>
