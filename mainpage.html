@@ -4,6 +4,9 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js">
+
+    </script>
     <title>Main Page</title>
     <link rel="stylesheet" href="css/app.css">
 
@@ -99,9 +102,10 @@
       </div>
 
     </div>
-    <div id="main-chart" class="column small-12">
+    <!-- Chart -->
+    <div id="chart-container" class="column small-12">
             <div class="finance-chart-area">
-                <canvas id="finance-chart" class="finance-chart" width="400" height="100"></canvas>
+                <canvas id="myChart" class="finance-chart" width="300" height="100"></canvas>
             </div>
         </div>
     <!--  productAndHistory-->
@@ -308,6 +312,9 @@
     <script src="bower_components/foundation-sites/dist/js/foundation.js"></script>
     <script src="js/login.js"></script>
     <script src="js/app.js"></script>
+    <script src="js/chart.js">
+
+    </script>
 
 
   </body>

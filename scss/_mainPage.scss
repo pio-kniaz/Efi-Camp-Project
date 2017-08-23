@@ -1,6 +1,6 @@
 .main-wrap{
-  height: 100vh;
-  background-color: $silver;
+  height: 100%;
+  background-color:$silver;
   font-family: 'Roboto Condensed';
   h1{
     font-family: 'Roboto Condensed', sans-serif;
@@ -38,6 +38,9 @@ font-weight: 300;
       }
     }
   }
+  #main-chart{
+    
+  }
   span{
     font-weight: bold;
     margin-right: 5px;
@@ -48,7 +51,7 @@ font-weight: 300;
     }
     line-height: 70px;
   .switch-paddle{
-    
+
     // background-color: black;
     border-radius: 10%;
     width: 5rem;
