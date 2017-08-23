@@ -51,7 +51,7 @@ function call() {
             inputPassword.classList.remove("warrning");
             $('.triangle1').removeClass("unHide");
             $('.triangle2').removeClass("unHide");
-
+            window.location = "mainpage.html"
            console.log(response);
        }
    });
@@ -61,7 +61,7 @@ function call() {
 var xButton=$('.fi-x');
 xButton.on("click",function(){
   $("#username").removeClass("hiden");
-  
+
   $("#username").addClass("unHide");
   $(".fake-login").addClass("hiden");
 })
