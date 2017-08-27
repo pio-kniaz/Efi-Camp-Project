@@ -1,37 +1,55 @@
-$.ajax({
-  method:'get',
-  url:'https://efigence-camp.herokuapp.com/api/data/products',
-  dataTypes:'jeson',
-  success:function(data){
-    console.log(data);
-    // $.map(data,function(products,i){
-      // Wallet Box
-      $("#wallet-elem").append("["+data.content[0].elements+"]");
-      $("#wallet-currency").append(data.content[0].currency);
-      $("#wallet-amount").append(data.content[0].amount);
-      $("#wallet-type").append(data.content[0].type);
+const getProductsData = (endpoint, containerClassName) => {
+	$.get('https://efigence-camp.herokuapp.com/api/' + endpoint,
+			 (data) => {
+		const productsContainer = document.querySelector(".product-list");
+		const productsList = data.content;
+		console.log(productsList);
 
-      // Pigy Box
-      $("#depo-type").append(data.content[1].type);
-      $("#depo-currency").append(data.content[1].currency);
-      $("#depo-amount").append(data.content[1].amount);
-      $("#depo-elem").append('['+data.content[1].elements+']');
+		const productTemplate = (productData) => {
 
-      // coins box
+			let icon;
+			switch(productData.type) {
+				case 'Wallet':
+					icon =("<img src="+"./img/wallet.png"+" "+ "alt='wallet-icon'>")
 
-      $("#coins-type").append(data.content[2].type);
-      $("#coins-currency").append(data.content[2].currency);
-      $("#coins-amount").append(data.content[2].amount);
-      $("#coins-elem").append('['+data.content[2].elements+']');
+					// dupa =("chuj")
+					break;
+				case 'Deposits':
+					icon = ("<img src="+"./img/pig.png"+" "+ "alt='wallet-icon'>")
+					break;
+				case 'Funds':
+					icon = ("<img src="+"./img/coins.png"+" "+ "alt='wallet-icon'>")
+					break;
+        case 'Bank loans':
+				icon = ("<img src="+"./img/finger.png"+" "+ "alt='finger-icon'>")
+				break;
 
-      // chart box
-      $("#chart-type").append(data.content[3].type);
-      $("#chart-currency").append(data.content[3].currency);
-      $("#chart-amount").append(data.content[3].amount);
-      $("#chart-elem").append('['+data.content[3].elements+']');
+				case 'Accounts':
+					icon = ("<img src="+"./img/chart.png"+" "+ "alt='finger-icon'>")
+					break;
+				default:
+
+			}
+
+		return `
+							<div class='product'>${icon}
+
+							<div class='product-wraper'>
 
 
-    // })
-  }
+							<h6>${productData.type}</h6>
+							<span class='amount'>${productData.amount}</span>
+							<span>${productData.currency}</span></div></div>
 
-})
+						`
+
+		};
+
+		productsList.forEach((element, index) => {
+
+			const template = productTemplate(element);
+			productsContainer.insertAdjacentHTML('beforeend', template);
+		});
+});
+}
+getProductsData('data/products', '.products');

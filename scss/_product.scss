@@ -1,34 +1,32 @@
-.products{
-  h4{
-    font-size: 16px;
-  }
-  .product-box{
-    background-color: $white;
-    display: flex;
-    padding: 8%;
-    margin: 5% 0 5% 0;
-
-    align-items: center;
-    border-radius: 5px;
-    p{
-      margin-bottom: 0;
-    }
+.product-list{
+  display: flex;
+  flex-wrap: wrap;
 
 
-    .img-pic{
+.product {
+  display: flex;
+  border-radius: 5px;
+  background-color: $white;
+  width: 44%;
+  // margin: 5% 0 5% 0;
+  margin:0 5% 2% 1%;
+  padding: 8% 8% 8% 2%;
+  transition: all 0.5s ease;
 
-    }
-    .content-box{
-      margin-left: 5%;
-      p:{
-        margin: 0;
-        padding: 0;
-
-      }
-    }
-  }
-  .finger-box{
-    background-color: $topaz;
-  }
-
+ &:hover {
+   cursor: pointer;
+   background-color: blue;
+   transition: all 0.5s ease;
+ }
+ .product-wraper{
+   width: 50%;
+   margin-left: 10%;
+   h6{
+     margin-bottom: 0;
+   }
+ }
+}
+.product:last-child{
+  background-color: $topaz;
+}
 }

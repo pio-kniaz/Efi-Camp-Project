@@ -1,36 +1,51 @@
-h4{
-  font-size: 16px;
-}
-.history-wrap{
 
-  margin-top: 4%;
-.history-content{
+.history-list {
+ cursor: pointer;
+ max-height: 300px;
+ overflow: auto;
+.history{
   background-color:$white;
+    display: flex;
+    align-items: center;
+    padding: 2%;
+    border-bottom: 1px solid black;
+    border-radius: 5px;
+  h6{
+    flex: 1;
+     }
+     .text-content{
+        flex: 3;
+        span{
+          margin: 5%;
+
+        }
+        .wrap{
+            .cash{
+              display: block;
+            }
+        }
+  }
+}
+.last-wraper{
+  font-size: 21px;
   display: flex;
-  align-items: center;
-  padding: 2%;
-  border-bottom: 1px solid black;
-  border-radius: 5px;
-
-  .time{
-    flex: 1;
+  .color-green{
+    color: green;
+    font-weight: bold;
 
   }
-  .text-content{
-    flex: 3;
-    p{
-      margin: 0;
-      button{
-        background-color: $topaz;
-        padding: 2%;
-        color: $white;
-        border-radius: 4px;
-      }
-    }
+  .color-red {
+    color: red;
+    font-weight: bold;
   }
-  .money-wrap{
 
-    flex: 1;
+  .color-red::before{
+    content: "-";
+  }
+
+  span{
+    padding-top: 10%;
+    padding-bottom: 30%;
   }
 }
 }
