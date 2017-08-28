@@ -10,10 +10,11 @@ var img=("<img src="+"./img/wallet.png"+" "+ "alt='wallet-icon'>")
 var img2=("<img src="+"./img/pig.png"+" "+ "alt='pig-icon'>");
 
 
-$(document).ready(function () {
-       getProducts();
+// $(document).ready(function () {
+//        getProducts();
+//
+// });
 
-});
 
 
 

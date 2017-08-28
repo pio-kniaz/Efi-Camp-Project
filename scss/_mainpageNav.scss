@@ -1,14 +1,29 @@
 header{
   font-family: 'Roboto Condensed', sans-serif;
   nav{
-
+    @media (max-width: 425px){
+      position: relative;
+      height: 65px;
+    }
     background-color:$topaz;
     color: $white;
     .left-wrap-nav {
 
-
+      img{
+        width: 35%;
+        padding: 10%;
+      }
       .img-container{
+        @media(max-width: 640px){
+          position: absolute;
+        right: 50%;
+          transform: translateX(50%);
+          text-align: center;
+        }
         img{
+          @media (max-width: 425px){
+            width: 50%;
+          }
           width: 45%;
         }
       }
@@ -34,6 +49,9 @@ header{
 
     }
     .center-nav-wrap{
+      @media (min-width: 425px){
+        position: relative;
+      }
 
       .nav-main-page{
 

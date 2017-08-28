@@ -31,9 +31,7 @@ const getProductsData1 = (endpoint, containerClassName) => {
 		return `
 							<div class='history column'>
 							<h6>${historyData.date}</h6>
-
 							<div class='text-content'>
-
 							<div class='wrap'><span class='description'>
 							${historyData.description}
 							</span><span class='cash'>
@@ -42,7 +40,6 @@ const getProductsData1 = (endpoint, containerClassName) => {
 							 <div class='last-wraper'><span class='inPlus ${cur1}'>
 							 ${historyData.amount}</span><span>${historyData.currency}
 							</span></div></div>
-
 						`
 						// const template = "<div class='history column'>"
 			      //     +"<h6>"+response.content[i].date

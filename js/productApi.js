@@ -33,14 +33,10 @@ const getProductsData = (endpoint, containerClassName) => {
 
 		return `
 							<div class='product'>${icon}
-
 							<div class='product-wraper'>
-
-
 							<h6>${productData.type}</h6>
 							<span class='amount'>${productData.amount}</span>
 							<span>${productData.currency}</span></div></div>
-
 						`
 
 		};

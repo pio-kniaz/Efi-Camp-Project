@@ -19,12 +19,14 @@
         <div class="row align-middle align-justify">
           <div class="large-4 medium-4 left-wrap-nav column ">
             <div class="row align-middle align-justify">
+              <img src="./img/hamburger.png" alt="hamburger-icon" class="show-for-small-only">
               <div class="img-container large-6 medium-6">
+
                 <img src="./img/logo.png" alt="img company">
 
-                <img src="./img/avatar2.jpg" alt="User photo">
+                <img src="./img/avatar2.jpg" alt="User photo" class="hide-for-small-only">
               </div>
-              <div class="user-panel-container large-6 medium-6">
+              <div class="user-panel-container large-6 medium-6 small hide-for-small-only">
                 <span class="kowalski">Jan Kowalski</span>
                 <div class="name-panel-set">
                   <span class="mail-icon icon"><i class="fi-mail"></i></span>
@@ -34,7 +36,7 @@
               </div>
             </div>
           </div>
-          <div class="large-6 medium-6 center-nav-wrap">
+          <div class="large-6 medium-6 center-nav-wrap hide-for-small-only">
             <ul class="nav-main-page">
               <li class="home"><a href="#"><span class="icon-home"></span>HOME</a></li>
               <li><a href="#"><span class="icon-chart-area"></span>ANALYSE</a></li>
@@ -48,8 +50,9 @@
             </ul>
           </div>
           <div class="column right-nav-wrap move-left">
-            <span class="magnifying-glass-icon"><i class="fi-magnifying-glass"></i></span>
-            <span class="power-icon"><i class="fi-power"></i></span>
+            <span class="magnifying-glass-icon hide-for-small-only"><i class="fi-magnifying-glass"></i></span>
+            <span class="power-icon hide-for-small-only"><i class="fi-power"></i></span>
+            <span class="mail-icon icon show-for-small-only"><i class="fi-mail"></i></span>
           </div>
         </div>
       </nav>
@@ -60,9 +63,9 @@
 
     <div class="row top-content-wrap">
       <div class="large-9 medium-9 column">
-        <h1>Finance life stream</h1>
+        <h1 class="hide-for-small-only">Finance life stream</h1>
       </div>
-      <div class="btn-righ-wrap columns align-middle move-left">
+      <div class="btn-righ-wrap columns align-middle move-left hide-for-small-only">
         <span>Add</span>
         <a href="#"><button type="button" name="button" id="bank">Bank</button></a>
         <a href="login.html"><button type="button" id="payment" name="button">Payment</button></a>
@@ -70,23 +73,23 @@
 
     </div>
     <div class="row money-display-wrap">
-      <div class="large-3 medium-3 column money-display">
+      <div class="large-3 medium-3 column money-display hide-for-small-only">
         <h4>Balance</h4>
         <p><span id="balance-api"></span>PLN</p>
       </div>
 
-      <div class="large-3 medium-3 money-display">
+      <div class="large-3 medium-3 money-display column">
         <h4>Available funds</h4>
         <p><span id="funds-api"></span>PLN</p>
       </div>
 
-      <div class="large-3 medium-3 money-display payments">
+      <div class="large-3 medium-3 column money-display payments hide-for-small-only">
         <h4>Scheduled payments</h4>
         <p><span id="payments-api"></span>PLN</p>
         <button type="button" name="button">Fast Pay</button>
       </div>
 
-      <div class="columns switch-wrap">
+      <div class="columns switch-wrap hide-for-small-only">
         <div class="wrap-switch-btn move-left">
         <span>Accounts analysis</span>
 
@@ -103,11 +106,63 @@
 
     </div>
     <!-- Chart -->
-    <div id="chart-container" class="column small-12">
+    <div class="row">
+
+    <div id="chart-container" class=" small-12">
             <div class="finance-chart-area">
-                <canvas id="myChart" class="finance-chart" width="300" height="100"></canvas>
+                <canvas id="myChart" class="finance-chart-line" width="300" height="100"></canvas>
             </div>
         </div>
+        <!--Start Pie Chart  -->
+      <div id="chart-container-pie" class="column small-12 hide ">
+        <div class="row">
+          <!--Pie Chart Wrap start  -->
+          <div class="right-side column">
+            <form class="righ-form" action="index.html" method="post">
+              <label for="decision">Show</label>
+
+              <button id="decision" type="submit" name="button">INCOME</button>
+              <button id="decision" type="submit" name="button">EXPENCES</button>
+              <button id="decision" type="submit" name="button">BALANCE</button>
+
+              <label for="time-period">Chose time period</label>
+              <select id="time-period">
+                <option value="30Days">Last 30 Days</option>
+                <option value="30Days">Last 30 Days</option>
+                <option value="30Days">Last 30 Days</option>
+                <option value="30Days">Last 30 Days</option>
+              </select>
+
+              <label for="categories">Sort by</label>
+              <select id="categories">
+                <option value="All">All Categories</option>
+                <option value="All">All Categories</option>
+                <option value="All">All Categories</option>
+                <option value="All">All Categories</option>
+              </select>
+            </form>
+            <div class="bottom-content">
+              <div class="finger-wrap">
+                <img src="./img/finger.png" alt="finger icon"></div>
+                <div class="text-wrap">
+                  <p>Lower your expences
+                    by using 5%  cacheback
+                    on VISA credit card <a href="#">FIND OUT</a></p>
+                </div>
+
+            </div>
+          </div>
+          <!--  -->
+          <div class="column lage-8 medium-8 small-12">
+            <div class="finance-chart-area">
+                <canvas id="myChart2" class="finance-chart-pie" width="300" height="100"></canvas>
+            </div>
+          </div>
+        <!--  -->
+        </div>
+
+      </div>
+    </div>
     <!--  productAndHistory-->
 
     <!--Product  -->
@@ -115,7 +170,7 @@
       <div class="products small-12 medium-6 large-6 column">
         <h4>Products</h4>
 
-          <div class="column small-12">
+          <div class=" small-12">
             <div class="product-list">
 
             </div>
@@ -125,7 +180,7 @@
       </div>
 
       <!-- Right side History -->
-      <div class="small-12 medium-6 large-6 column">
+      <div class="small-12 medium-6 large-6 ">
         <h4>History</h4>
 
           <div class="column small-12">
@@ -151,6 +206,9 @@
     <!-- <script src="js/historyApiProblem.js"></script> -->
      <script src="js/productApi.js"></script>
      <script src="js/historyApi.js"></script>
+     <script src="js/chartToggle.js"></script>
+     <script src="js/pieChart.js"></script>
+
 
 
 
