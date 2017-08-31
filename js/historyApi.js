@@ -34,9 +34,9 @@ const getProductsData1 = (endpoint, containerClassName) => {
 							<div class='text-content'>
 							<div class='wrap'><span class='description'>
 							${historyData.description}
-							</span><span class='cash'>
+							</span><span class=' icon-down-open cash'>
 							${historyData.category}
-							</span></div></div>
+							</span> </div></div>
 							 <div class='last-wraper'><span class='inPlus ${cur1}'>
 							 ${historyData.amount}</span><span>${historyData.currency}
 							</span></div></div>

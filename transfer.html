@@ -1,0 +1,268 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js">
+
+    </script>
+    <title>Main Page</title>
+    <link rel="stylesheet" href="css/app.css">
+
+    <!-- <link rel="stylesheet" href="{{root}}assets/foundation-icons/foundation-icons.css" /> -->
+  </head>
+  <body>
+    <header>
+      <nav>
+
+        <div class="row align-middle align-justify">
+          <div class="large-4 medium-4 left-wrap-nav column ">
+            <div class="row align-middle align-justify">
+              <img src="./img/hamburger.png" alt="hamburger-icon" class="show-for-small-only hamburger">
+              <div class="img-container large-6 medium-6">
+
+                <img src="./img/logo.png" alt="img company">
+
+                <img src="./img/avatar2.jpg" alt="User photo" class="hide-for-small-only">
+              </div>
+              <div class="user-panel-container large-6 medium-6 small hide-for-small-only">
+                <span class="kowalski">Jan Kowalski</span>
+                <div class="name-panel-set">
+                  <span class="mail-icon icon"><i class="fi-mail"></i></span>
+                  <span class="widget-icon icon"><i class="fi-widget"></i></span>
+                </div>
+
+              </div>
+            </div>
+          </div>
+          <div class="large-6 medium-6 center-nav-wrap hide-for-small-only">
+            <ul class="nav-main-page">
+              <li class="home"><a href="#"><span class="icon-home"></span>HOME</a></li>
+              <li><a href="#"><span class="icon-chart-area"></span>ANALYSE</a></li>
+              <li><a href="#"><span class="icon-calendar-empty"></span>PLAN</a></li>
+              <li><a href="#"><span class="icon-money"></span>EARN</a></li>
+              <li><a href="#"><span></span></a></li>
+              <!-- <li class="home"><a href="#"><i class="fi-home icon-center"></i>Home</span></a></li><span class="home-icon">
+              <li><a href="#"><i class="fi-home icon-center"></i>Home</span></a></li><span class="home-icon">
+              <li><a href="#"><i class="fi-home icon-center"></i>Home</span></a></li><span class="home-icon">
+              <li><a href="#"><i class="fi-home icon-center"></i>Home</span></a></li><span class="home-icon"> -->
+            </ul>
+          </div>
+          <div class="column right-nav-wrap move-left">
+            <span class="magnifying-glass-icon hide-for-small-only"><i class="fi-magnifying-glass"></i></span>
+            <span class="power-icon hide-for-small-only"><i class="fi-power"></i></span>
+            <span class="mail-icon icon show-for-small-only"><i class="fi-mail"></i></span>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- MAIN -->
+    <main>
+
+    <div class="row">
+      <div class="small-8">
+        <div class="img-wrap">
+          <img src="#" alt="">
+          <span class="icon-chart-area"></span>
+
+
+        </div>
+        <div class="money-wrap">
+          <div class="current-wrap">
+            <span>Current account</span>
+          </div>
+          <div class="number-wrap">
+            <span>33 1234 5678 2233 0000 8373 7756</span>
+          </div>
+        </div>
+
+
+      </div>
+      <div class="small-4" >
+        <span class="amout">2917,50 PLN</span>
+      </div>
+    </div>
+      <div class="row">
+        <div class="small-3">
+          <!--Empty  -->
+          <p>sadasd</p>
+        </div>
+        <div class="small-9 column">
+          <p>Add the account from which you draw funds</p>
+        </div>
+      </div>
+      <!--type  -->
+      <div class="row">
+        <div class="small-3">
+          <span>Type</span>
+        </div>
+        <div class="small-9 column">
+
+
+        <div class="main-list-type">
+
+          <label for="currencies">
+            <input type="radio" id="country" class="hide" checked>
+            <span> <img src="./img/coins.png" alt=""></span>
+            <span>Country</span>
+          </label>
+          <!-- input:checked+icon.. tlo topaz
+          bez tlo grey -->
+
+          <label for="own">
+            <input type="radio" id="own" class="hide">
+            <span> <img src="./img/coins.png" alt=""></span>
+            <span>Own</span>
+          </label>
+
+          <label for="currencies">
+            <input type="radio" id="currencies" class="hide">
+            <span> <img src="./img/coins.png" alt=""></span>
+            <span>Currencies</span>
+          </label>
+
+          
+
+
+          <label for="zus">
+            <input type="radio" id="zus" class="hide">
+            <span> <img src="./img/coins.png" alt=""></span>
+            <span>ZUS</span>
+          </label>
+
+          <label for="TAX">
+            <input type="radio" id="tax" class="hide">
+            <span> <img src="./img/coins.png" alt=""></span>
+            <span>TAX</span>
+          </label>
+
+          <label for="gsm">
+            <input type="radio" id="gsm" class="hide">
+            <span> <img src="./img/coins.png" alt=""></span>
+            <span>GSM</span>
+          </label>
+        </div>
+        </div>
+      </div>
+
+      <!-- RECIPIENT -->
+      <div class="row">
+        <div class="small-3">
+          <label for="recipient">Recipient</label>
+        </div>
+
+        <div class="small-9 column">
+          <input type="text" id="recipient">
+        </div>
+
+      </div>
+
+      <!-- Where -->
+      <div class="row">
+        <div class="small-3">
+          <label for="where">Where</label>
+        </div>
+        <div class="small-9 column">
+        <fieldset id="where">
+
+          <input type="checkbox"  value="account" checked> Account
+          <input type="checkbox"  value="facebook" > Facebook
+          <input type="checkbox"  value="phone" > Phone
+          <input type="checkbox"  value="e-mail" > E-mail
+          <input type="checkbox"  value="phone" > By Phone
+      </fieldset>
+        </div>
+
+      </div>
+      <!-- Number -->
+      <div class="row">
+        <div class="small-3">
+          <label for="number">Number</label>
+        </div>
+
+        <div class="small-9 column">
+          <input type="text" name="" value="" id="number">
+        </div>
+      </div>
+      <!--Sum  -->
+      <div class="row">
+        <div class="small-3">
+          <label for="sum">Sum</label>
+        </div>
+        <div class="small-9 column">
+          <div class="input=wraper">
+            <input id="sum" type="text" name="" value="">
+            <select class="cash" name="">
+              <option value="pln">PLN</option>
+              <option value="pln">EUR</option>
+            </select>
+          </div>
+        </div>
+      </div>
+        <!-- WHEN -->
+        <div class="row">
+          <div class="small-3">
+            <label for="when">When</label>
+          </div>
+          <div class="small-9 column">
+            <input type="date" id="when" name="" value="">
+          </div>
+        </div>
+        <!--Title  -->
+        <div class="row">
+          <div class="small-3">
+            <label for="title">Title</label>
+          </div>
+          <div class="small-9 column">
+            <input type="text" id="title">
+          </div>
+        </div>
+        <!-- Transfer -->
+        <div class="row">
+          <div class="small-3">
+            <label for="transfer">Transfer</label>
+          </div>
+          <div class="small-9 column">
+
+          <div class="main-list-transfer">
+
+            <input type="radio" id="normaly">
+            <label for="country">Normaly</label>
+
+            <input type="radio" id="express">
+            <label for="own">Expres Eliksir</label>
+
+            <input type="radio" id="sorbnet">
+            <label for="currencies">Sorbnet</label>
+
+
+
+          </div>
+
+          </div>
+
+        </div>
+
+    </div>
+</main>
+
+
+
+
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/what-input/dist/what-input.js"></script>
+    <script src="bower_components/foundation-sites/dist/js/foundation.js"></script>
+    <script src="js/login.js"></script>
+    <!-- <script src="js/ProductApiProbems.js"></script> -->
+    <script src="js/chart.js"></script>
+    <script src="js/balance.js"></script>
+
+    <!-- <script src="js/historyApiProblem.js"></script> -->
+     <script src="js/productApi.js"></script>
+     <script src="js/historyApi.js"></script>
+     <script src="js/chartToggle.js"></script>
+     <script src="js/pieChart.js"></script>
+
+  </body>
+</html>

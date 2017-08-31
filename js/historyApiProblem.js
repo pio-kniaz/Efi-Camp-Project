@@ -26,12 +26,13 @@ $.ajax({
 
       switch(response.content[i].status) {
           case "outcome":
-              $('.inPlus').css("color","red");
+              $('.inPlus').last().css("color","red");
                console.log("wydatki");
               break;
          case "income":
          console.log("przychody");
-         $('.inPlus').css("color","green");
+         $('.inPlus').last().css("color","green");
+         break;
 
 
               default:
